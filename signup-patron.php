@@ -141,7 +141,7 @@
 		
 	
 	$data = array($full_name, $user_name, $email,$pass,$cpass);
-	$Imsg = $db->addUserDB($data);
+	$Imsg = $db->addPatronDB($data);
 	
 	
 	if ($Imsg == 1) 

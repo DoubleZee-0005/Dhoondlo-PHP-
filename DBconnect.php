@@ -13,10 +13,10 @@
             }            
         }
 
-        public function addUserDB($var)
+        public function addPatronDB($var)
         {
        
-        $result = $this->conn->prepare("INSERT INTO users (full_name,user_name,user_email,user_password,c_user_password) VALUES (?,?,?,?,?)");            
+        $result = $this->conn->prepare("INSERT INTO user (fullName,userName,email,password,cpassword) VALUES (?,?,?,?,?)");            
         $result->execute($var);           	
 
         if($result->rowCount())
@@ -29,12 +29,20 @@
         }
         }
 
-        public function duplicateCheck($email)
-        {   
-            $query = "SELECT * FROM users WHERE user_email='alialvi13054@gmail.com'";
-            $query_run = $this->conn->query($query);
-            $exec = $query_run->rowCount();
-            echo $exec;            
+        public function addSellerDB($var)
+        {
+       
+        $result = $this->conn->prepare("INSERT INTO sellers (fullName,userName,email,password,cpassword,shopName,webAddress,businessAddress) VALUES (?,?,?,?,?,?,?,?)");            
+        $result->execute($var);           	
+
+        if($result->rowCount())
+        {            
+            return 1;            
+        }
+        else
+        {            
+            return 0;        
+        }
         }
     }
 
