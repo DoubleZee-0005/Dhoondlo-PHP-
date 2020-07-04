@@ -1,0 +1,65 @@
+:root
+{
+  --main-slate: #687864;
+  --main-blue: #31708e;
+  --sub-blue: #5085a5;
+  --sub-blue2:#8fc1e3;
+  --main-white: #f7f9fb; 
+}
+
+*
+{
+  margin: 0;
+  padding: 0;    
+}
+
+.main-div
+{
+  height: 100vh;
+  width: 100%;
+}
+
+.tilt {
+	box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+	transform-style: preserve-3d;
+  margin: 50px auto;
+  border-radius: 100px;
+}
+
+.tilt-logo {
+	width: 300px;
+	height: 300px;	
+}
+
+
+.tilt-logo-inner img
+{
+  width: 300px;
+	height: 300px;
+}
+
+.main-heading
+{
+  padding-top: 70px;
+  text-transform: uppercase;
+  color: var(--sub-blue2);
+  font-size: 45px !important;
+}
+
+.sub-heading
+{
+  color: var(--sub-blue);
+}
+
+footer {
+  position: block;
+  padding:10px 10px 20px 10px;
+ left: 0;
+ bottom:-10px;
+ width: 100%;
+ background-color: var(--main-blue);
+ color: white;
+ text-align: center;
+ font-size: 12px;
+ height: 50px;
+}
